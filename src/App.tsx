@@ -1,25 +1,47 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Wrapper from "./components/Wrapper";
+import Screen from "./components/Screen";
+import ButtonBox from "./components/ButtonBox";
+import Button from "./components/Button";
+import { buttonValues, operations } from "./components/constants";
+import { Calculation } from "./components/interfaces/Calculation";
+
+const applyClassName = (btn: string | number) => {
+  if (btn === "=") {
+    return "equals";
+  }
+
+  if (operations.includes(btn.toString())) {
+    return "operations";
+  }
+
+  return "";
+};
 
 function App() {
+  const [calc, setCalc] = useState<Calculation>({
+    sign: "",
+    num: 0,
+    res: 0,
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Screen value={calc.num ? calc.num : calc.res} />
+      <ButtonBox>
+        {buttonValues.flat().map((btn, index) => {
+          return (
+            <Button
+              key={index}
+              className={applyClassName(btn)}
+              value={btn}
+              calc={calc}
+              setCalc={setCalc}
+            />
+          );
+        })}
+      </ButtonBox>
+    </Wrapper>
   );
 }
 
