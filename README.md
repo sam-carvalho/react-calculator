@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Calculator App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple calculator application built with React, SCSS, and TypeScript.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Perform basic arithmetic operations such as addition, subtraction, multiplication, and division.
+- Handle decimal numbers and percentages.
+- Invert the sign of a number.
+- Clear the calculator and start a new calculation.
 
-### `yarn start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Clone the repository:** Start by cloning the GitHub repository to your local machine using the following command:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```sh
+git clone https://github.com/sam-carvalho/calculator-app.git
+```
 
-### `yarn test`
+2. **Navigate to the project directory:** Move into the project directory using the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+cd react-calculator
+```
 
-### `yarn build`
+3. **Install dependencies:** Install the required dependencies by running the following command:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+yarn install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Start the development server:** Once the dependencies are installed, start the development server with the following command:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+yarn start
+```
 
-### `yarn eject`
+This will compile the project and start the app on a local development server. You should see a message indicating the server is running and listening on a specific port (e.g., http://localhost:3000).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Usage
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Launch the calculator app in your web browser.
+2. Use the buttons to enter numbers and perform calculations.
+3. Click the "C" button to clear the calculator and start a new calculation.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Design 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Design Files
 
-## Learn More
+[Mockup](public/calculator-mock.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Color Palette
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Color Palette](public/calculator-palette.png)
+
+### Credits
+
+Color palette comes from [Coolors](https://coolors.co/palettes).
+
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to submit a pull request or open an issue in this repository.
+
+## License
+
+This project is licensed under the MIT License.
