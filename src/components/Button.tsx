@@ -130,11 +130,10 @@ const handleNumClick = (
   event.preventDefault();
 
   const numString = calc.num.toString();
-  const updatedNum = numString.includes(".") ? numString + value : value;
 
   setCalc((prevCalc) => ({
     ...prevCalc,
-    num: Number(updatedNum),
+    num: Number(numString + value),
     res: !calc.sign ? 0 : calc.res,
   }));
 };
